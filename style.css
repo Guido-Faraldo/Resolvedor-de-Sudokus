@@ -1,0 +1,144 @@
+/* ========================= RESET ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================= BODY ========================= */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* ========================= TABLERO ========================= */
+
+table {
+    width: min(90vw, 500px);
+    height: min(90vw, 500px);
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 3px solid #222;
+}
+
+
+/* ========================= CASILLAS ========================= */
+
+td {
+    width: 11.111%;
+    height: 11.111%;
+    padding: 0;
+    border: 1px solid #999;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+}
+
+td.seleccionada {
+    background-color: rgb(225, 225, 225);
+}
+
+/* ========================= BORDES VERTICALES ========================= */
+
+td:nth-child(3),
+td:nth-child(6) {
+    border-right: 3px solid #222;
+}
+
+/* ========================= BORDES HORIZONTALES ========================= */
+
+tr:nth-child(3) td,
+tr:nth-child(6) td {
+    border-bottom: 3px solid #222;
+}
+
+/* ========================= BOTONES ========================= */
+
+/*botones numeros*/
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.btn-numero{
+    width: 35px;
+    height: 35px;
+    font-size: 27px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.25s;
+}
+
+.btn-numero:hover{
+    background-color: #999;
+}
+
+/*botones borrar*/
+.botones-borrar{
+    display: flex;
+    gap: 40px;
+    margin-top: 5px;
+    padding-left: 90px;
+}
+
+.btn-borrar{
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.25s;
+}
+
+.btn-borrar:hover{
+    background-color: #999;
+}
+
+#btn-borrar-casilla{
+    width: 40px;
+    height: 35px;
+    font-size: 30px;
+    padding: 0px 0px 40px 0px;
+}
+
+#btn-borrar-todo{
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*botones respuesta*/
+.botones-respuesta{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    padding-right: 25px;
+}
+
+.btn-rta{
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.25s;
+}
+
+.btn-rta:hover{
+    background-color: #999;
+}
+
+#btn-completar-sudoku{
+    font-size: 20px;
+    padding: 10px;
+}
+
+#btn-anotar-posibles{
+    font-size: 20px;
+    padding: 10px;
+}
