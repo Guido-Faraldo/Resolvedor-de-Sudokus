@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvedor de Sudokus</title>
+    <link rel="icon" type="image/png" href="IMAEGENES/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="casilla casilla-grande-1" data-fila="0" data-columna="0" id="casilla-1"></td>
+            <td class="casilla casilla-grande-1" data-fila="0" data-columna="1" id="casilla-2"></td>
+            <td class="casilla casilla-grande-1" data-fila="0" data-columna="2" id="casilla-3"></td>
+            <td class="casilla casilla-grande-2" data-fila="0" data-columna="3" id="casilla-4"></td>
+            <td class="casilla casilla-grande-2" data-fila="0" data-columna="4" id="casilla-5"></td>
+            <td class="casilla casilla-grande-2" data-fila="0" data-columna="5" id="casilla-6"></td>
+            <td class="casilla casilla-grande-3" data-fila="0" data-columna="6" id="casilla-7"></td>
+            <td class="casilla casilla-grande-3" data-fila="0" data-columna="7" id="casilla-8"></td>
+            <td class="casilla casilla-grande-3" data-fila="0" data-columna="8" id="casilla-9"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-1" data-fila="1" data-columna="0" id="casilla-10"></td>
+            <td class="casilla casilla-grande-1" data-fila="1" data-columna="1" id="casilla-11"></td>
+            <td class="casilla casilla-grande-1" data-fila="1" data-columna="2" id="casilla-12"></td>
+            <td class="casilla casilla-grande-2" data-fila="1" data-columna="3" id="casilla-13"></td>
+            <td class="casilla casilla-grande-2" data-fila="1" data-columna="4" id="casilla-14"></td>
+            <td class="casilla casilla-grande-2" data-fila="1" data-columna="5" id="casilla-15"></td>
+            <td class="casilla casilla-grande-3" data-fila="1" data-columna="6" id="casilla-16"></td>
+            <td class="casilla casilla-grande-3" data-fila="1" data-columna="7" id="casilla-17"></td>
+            <td class="casilla casilla-grande-3" data-fila="1" data-columna="8" id="casilla-18"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-1" data-fila="2" data-columna="0" id="casilla-19"></td>
+            <td class="casilla casilla-grande-1" data-fila="2" data-columna="1" id="casilla-20"></td>
+            <td class="casilla casilla-grande-1" data-fila="2" data-columna="2" id="casilla-21"></td>
+            <td class="casilla casilla-grande-2" data-fila="2" data-columna="3" id="casilla-22"></td>
+            <td class="casilla casilla-grande-2" data-fila="2" data-columna="4" id="casilla-23"></td>
+            <td class="casilla casilla-grande-2" data-fila="2" data-columna="5" id="casilla-24"></td>
+            <td class="casilla casilla-grande-3" data-fila="2" data-columna="6" id="casilla-25"></td>
+            <td class="casilla casilla-grande-3" data-fila="2" data-columna="7" id="casilla-26"></td>
+            <td class="casilla casilla-grande-3" data-fila="2" data-columna="8" id="casilla-27"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-4" data-fila="3" data-columna="0" id="casilla-28"></td>
+            <td class="casilla casilla-grande-4" data-fila="3" data-columna="1" id="casilla-29"></td>
+            <td class="casilla casilla-grande-4" data-fila="3" data-columna="2" id="casilla-30"></td>
+            <td class="casilla casilla-grande-5" data-fila="3" data-columna="3" id="casilla-31"></td>
+            <td class="casilla casilla-grande-5" data-fila="3" data-columna="4" id="casilla-32"></td>
+            <td class="casilla casilla-grande-5" data-fila="3" data-columna="5" id="casilla-33"></td>
+            <td class="casilla casilla-grande-6" data-fila="3" data-columna="6" id="casilla-34"></td>
+            <td class="casilla casilla-grande-6" data-fila="3" data-columna="7" id="casilla-35"></td>
+            <td class="casilla casilla-grande-6" data-fila="3" data-columna="8" id="casilla-36"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-4" data-fila="4" data-columna="0" id="casilla-37"></td>
+            <td class="casilla casilla-grande-4" data-fila="4" data-columna="1" id="casilla-38"></td>
+            <td class="casilla casilla-grande-4" data-fila="4" data-columna="2" id="casilla-39"></td>
+            <td class="casilla casilla-grande-5" data-fila="4" data-columna="3" id="casilla-40"></td>
+            <td class="casilla casilla-grande-5" data-fila="4" data-columna="4" id="casilla-41"></td>
+            <td class="casilla casilla-grande-5" data-fila="4" data-columna="5" id="casilla-42"></td>
+            <td class="casilla casilla-grande-6" data-fila="4" data-columna="6" id="casilla-43"></td>
+            <td class="casilla casilla-grande-6" data-fila="4" data-columna="7" id="casilla-44"></td>
+            <td class="casilla casilla-grande-6" data-fila="4" data-columna="8" id="casilla-45"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-4" data-fila="5" data-columna="0" id="casilla-46"></td>
+            <td class="casilla casilla-grande-4" data-fila="5" data-columna="1" id="casilla-47"></td>
+            <td class="casilla casilla-grande-4" data-fila="5" data-columna="2" id="casilla-48"></td>
+            <td class="casilla casilla-grande-5" data-fila="5" data-columna="3" id="casilla-49"></td>
+            <td class="casilla casilla-grande-5" data-fila="5" data-columna="4" id="casilla-50"></td>
+            <td class="casilla casilla-grande-5" data-fila="5" data-columna="5" id="casilla-51"></td>
+            <td class="casilla casilla-grande-6" data-fila="5" data-columna="6" id="casilla-52"></td>
+            <td class="casilla casilla-grande-6" data-fila="5" data-columna="7" id="casilla-53"></td>
+            <td class="casilla casilla-grande-6" data-fila="5" data-columna="8" id="casilla-54"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-7" data-fila="6" data-columna="0" id="casilla-55"></td>
+            <td class="casilla casilla-grande-7" data-fila="6" data-columna="1" id="casilla-56"></td>
+            <td class="casilla casilla-grande-7" data-fila="6" data-columna="2" id="casilla-57"></td>
+            <td class="casilla casilla-grande-8" data-fila="6" data-columna="3" id="casilla-58"></td>
+            <td class="casilla casilla-grande-8" data-fila="6" data-columna="4" id="casilla-59"></td>
+            <td class="casilla casilla-grande-8" data-fila="6" data-columna="5" id="casilla-60"></td>
+            <td class="casilla casilla-grande-9" data-fila="6" data-columna="6" id="casilla-61"></td>
+            <td class="casilla casilla-grande-9" data-fila="6" data-columna="7" id="casilla-62"></td>
+            <td class="casilla casilla-grande-9" data-fila="6" data-columna="8" id="casilla-63"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-7" data-fila="7" data-columna="0" id="casilla-64"></td>
+            <td class="casilla casilla-grande-7" data-fila="7" data-columna="1" id="casilla-65"></td>
+            <td class="casilla casilla-grande-7" data-fila="7" data-columna="2" id="casilla-66"></td>
+            <td class="casilla casilla-grande-8" data-fila="7" data-columna="3" id="casilla-67"></td>
+            <td class="casilla casilla-grande-8" data-fila="7" data-columna="4" id="casilla-68"></td>
+            <td class="casilla casilla-grande-8" data-fila="7" data-columna="5" id="casilla-69"></td>
+            <td class="casilla casilla-grande-9" data-fila="7" data-columna="6" id="casilla-70"></td>
+            <td class="casilla casilla-grande-9" data-fila="7" data-columna="7" id="casilla-71"></td>
+            <td class="casilla casilla-grande-9" data-fila="7" data-columna="8" id="casilla-72"></td>
+        </tr>
+        <tr>
+            <td class="casilla casilla-grande-7" data-fila="8" data-columna="0" id="casilla-73"></td>
+            <td class="casilla casilla-grande-7" data-fila="8" data-columna="1" id="casilla-74"></td>
+            <td class="casilla casilla-grande-7" data-fila="8" data-columna="2" id="casilla-75"></td>
+            <td class="casilla casilla-grande-8" data-fila="8" data-columna="3" id="casilla-76"></td>
+            <td class="casilla casilla-grande-8" data-fila="8" data-columna="4" id="casilla-77"></td>
+            <td class="casilla casilla-grande-8" data-fila="8" data-columna="5" id="casilla-78"></td>
+            <td class="casilla casilla-grande-9" data-fila="8" data-columna="6" id="casilla-79"></td>
+            <td class="casilla casilla-grande-9" data-fila="8" data-columna="7" id="casilla-80"></td>
+            <td class="casilla casilla-grande-9" data-fila="8" data-columna="8" id="casilla-81"></td>
+        </tr>
+    </table>
+    <div class="botones">
+        <button class="btn-numero" id="btn-1">1</button>
+        <button class="btn-numero" id="btn-2">2</button>
+        <button class="btn-numero" id="btn-3">3</button>
+        <button class="btn-numero" id="btn-4">4</button>
+        <button class="btn-numero" id="btn-5">5</button>
+        <button class="btn-numero" id="btn-6">6</button>
+        <button class="btn-numero" id="btn-7">7</button>
+        <button class="btn-numero" id="btn-8">8</button>
+        <button class="btn-numero" id="btn-9">9</button>
+    </div>
+    <div class="botones-borrar">
+        <button class="btn-borrar" id="btn-borrar-casilla">🗑</button>
+        <button class="btn-borrar" id="btn-borrar-todo">Limpiar todo</button>
+    </div>
+    <div class="botones-respuesta">
+        <button class="btn-rta" id="btn-completar-sudoku">Completar Sudoku</button>
+        <button class="btn-rta" id="btn-anotar-posibles">Anotar candidatos</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
